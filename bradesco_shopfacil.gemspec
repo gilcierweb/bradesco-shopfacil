@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Bradesco ShopFácil - Meios de Pagamento Bradesco Boleto Bancário"
   spec.description   = "Bradesco ShopFácil - Meios de Pagamento Bradesco Boleto Bancário"
-  spec.homepage      = "http://gilcierweb.com.br"
+  spec.homepage      = "https://github.com/gilcierweb/bradesco-shopfacil"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
