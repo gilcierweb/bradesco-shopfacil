@@ -1,6 +1,6 @@
 module BradescoShopfacil
 
-  class Order
+  module Order
 
     attr_accessor :order_number, :order_value, :order_description
 

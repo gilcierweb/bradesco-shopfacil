@@ -2,7 +2,7 @@ require 'rest-client'
 
 module BradescoShopfacil
 
-  class RequestService
+  module ServiceRequest
 
     def request
       # RestClient.post()

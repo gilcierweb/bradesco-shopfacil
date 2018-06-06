@@ -1,20 +1,23 @@
 require 'socket'
+require 'rest-client'
+
 require_relative 'buyer_address'
 
 module BradescoShopfacil
 
-  class Buyer
+  module Buyer
 
-    attr_accessor :buyer_name, :buyer_document
+    include BuyerAddress
+
+    attr_accessor :buyer_name, :buyer_document, :buyer_http_user_agent
 
     def data_service_buyer
-      buyer_address = BradescoShopfacil::BuyerAddress.new
       buyer = {
           "nome" => buyer_name,
           "documento" => buyer_document,
-          "endereco" => buyer_address.data_service_buyer_address,
+          "endereco" => data_service_buyer_address,
           "ip" => get_ip,
-          "user_agent" => http_user_agent
+          "user_agent" => get_http_user_agent
       }
       buyer
     end
@@ -26,14 +29,10 @@ module BradescoShopfacil
       ip_address[0]
     end
 
-    def http_user_agent
-      ENV['HTTP_USER_AGENT']
+    def get_http_user_agent
+      !buyer_http_user_agent.nil? ? buyer_http_user_agent : RestClient::Platform.default_user_agent
     end
 
   end
 
 end
-
-# t = BradescoShopfacil::Buyer.new
-#
-# pp t.data_service_buyer

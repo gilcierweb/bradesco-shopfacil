@@ -1,6 +1,6 @@
 module BradescoShopfacil
 
-  class BuyerAddress
+  module BuyerAddress
 
     attr_accessor :buyer_address_zip_code,
                   :buyer_address_patio,

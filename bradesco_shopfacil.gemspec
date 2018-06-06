@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["gilcierweb"]
   spec.email         = ["gilcier06@yahoo.com.br"]
 
-  spec.summary       = "Bradesco Shopfacil"
-  spec.description   = "Bradesco Shopfacil"
+  spec.summary       = "Bradesco ShopFácil - Meios de Pagamento Bradesco Boleto Bancário"
+  spec.description   = "Bradesco ShopFácil - Meios de Pagamento Bradesco Boleto Bancário"
   spec.homepage      = "http://gilcierweb.com.br"
   spec.license       = "MIT"
 

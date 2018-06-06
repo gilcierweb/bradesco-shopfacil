@@ -1,9 +1,10 @@
-require 'socket'
 require_relative 'bank_slip_instructions'
 
 module BradescoShopfacil
 
-  class BankSlip
+  module BankSlip
+
+    include BankSlipInstructions
 
     attr_accessor :bank_slip_beneficiary,
                   :bank_slip_wallet,
@@ -17,7 +18,6 @@ module BradescoShopfacil
                   :data_service_bank_slip_register
 
     def data_service_bank_slip
-      bank_slip_instructions = BradescoShopfacil::BankSlipInstructions.new
       bank_slip = {
           "beneficiario" => bank_slip_beneficiary,
           "carteira" => bank_slip_wallet,
@@ -28,7 +28,7 @@ module BradescoShopfacil
           "url_logotipo" => bank_slip_url_logo,
           "mensagem_cabecalho" => bank_slip_header_message,
           "tipo_renderizacao" => bank_slip_rendering_type,
-          "instrucoes" => bank_slip_instructions.data_service_bank_slip_instructions,
+          "instrucoes" => data_service_bank_slip_instructions,
           "registro" => data_service_bank_slip_register
       }
       bank_slip

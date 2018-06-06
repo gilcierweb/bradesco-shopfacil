@@ -1,8 +1,6 @@
-require 'socket'
-
 module BradescoShopfacil
 
-  class BankSlipInstructions
+  module BankSlipInstructions
 
     attr_accessor :bank_slip_instructions_line_1,
                   :bank_slip_instructions_line_2,
@@ -38,11 +36,3 @@ module BradescoShopfacil
   end
 
 end
-
-# t = BradescoShopfacil::BankSlipInstructions.new
-#
-# puts t.data_service_bank_slip_instructions
-# t.bank_slip_instructions_line_1 = 'gilcierewrwer'
-# pp t.dataServiceBoletoInstrucoes
-# p t.bank_slip_instructions_line_1
-# p t.bank_slip_instructions_line_2
