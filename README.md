@@ -12,6 +12,10 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'bradesco_shopfacil'
+
+# or
+gem 'bradesco_shopfacil', :git => 'https://github.com/gilcierweb/bradesco-shopfacil'
+
 ```
 
 And then execute:
